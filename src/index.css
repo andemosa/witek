@@ -1,13 +1,35 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: 'Cera Pro';
+  src: url(./fonts/cera\ pro\ sv/Cera\ Pro\ Medium.otf);
+}
+@font-face {
+  font-family: 'Spoof Trial Regular';
+  src: url(./fonts/SpoofTrial/SpoofTrial-Regular.otf);
+}
+@font-face {
+  font-family: 'Spoof Trial Bold';
+  src: url(./fonts/SpoofTrial/SpoofTrial-Bold.otf);
+}
+@font-face {
+  font-family: 'Faible Regular';
+  src: url(./fonts/Faible/Faible-Regular.otf);
+}
+@font-face {
+  font-family: 'Faible Bold';
+  src: url(./fonts/Faible/Faible-Bold.otf);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }

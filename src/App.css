@@ -1,38 +1,342 @@
-.App {
-  text-align: center;
+body {
+  background: #fff8ef;
+  overflow-x: hidden;
+  color: #004e4c;
+  max-width: 1900px;
+  margin: auto;
+  width: 95%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  font-family: "Cera Pro";
+  width: 95%;
+  margin: auto;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul li {
+  margin-left: 3rem;
+  cursor: pointer;
+}
+
+nav ul button {
+  background: #faa834;
+  border-radius: 8px;
+  color: #fff8ef;
+  padding: 10px 20px;
+  outline: none;
+  border: none;
+}
+
+nav ul button:hover {
+  background: transparent;
+  color: #faa834;
+  border: 1px solid #faa834;
+  padding: 9px 19px;
+}
+
+nav > div {
+  display: none;
+}
+
+/* MAIN */
+main > section {
+  display: flex;
+  width: 90%;
+  margin: 4em auto;
+}
+main img {
+  border-radius: 12px;
+}
+main > section > div {
+  flex: 1;
+}
+.mobile__images {
+  display: none;
+}
+/* HERO-TEXT */
+.hero__text {
+  position: relative;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: column;
+  padding: 1em;
+}
+.hero__heading {
+  height: 100%;
+  width: 80%;
+  margin: 1em auto;
+}
+.hero__text p {
+  font-family: "Spoof Trial Regular";
+  font-size: 22px;
+}
+.hero__text h1 {
+  font-family: "Spoof Trial Bold";
+  font-size: 80px;
+}
+.hero__text h1 > span {
+  color: #faa834;
+}
+.wiket__float {
+  position: absolute;
+  top: 400px;
+  left: -110px;
+  z-index: -1;
+}
+.wiket__float > div {
+  width: 200px;
+}
+.wiket__text {
+  position: absolute;
+  top: 500px;
+  left: 200px;
+  width: 450px !important;
+  font-family: "Faible Regular";
+}
+.wiket__text__mobile {
+  display: none;
+}
+.font__bold {
+  font-family: "Faible Bold";
+}
+/* HERO-TEXT */
+/* MAIN IMAGES */
+.hero__main {
+  display: flex;
+  flex-direction: column;
+}
+.hero__main > div {
+  position: relative;
+}
+.hero__main > h4 {
+  margin: 8px 0 4px;
+  font-family: "Faible Bold";
+}
+.hero__main > p {
+  font-family: "Faible Regular";
+  font-size: 13px;
+}
+.float{
+  background: #fff8ef;
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  width: 130px;
+  padding: 10px 6px;
+}
+.float > h4 {
+  margin: 0;
+  font-family: "Faible Bold";
+}
+.float > p {
+  font-family: "Faible Regular";
+  font-size: 13px;
+}
+.floatdiv__one {
+  position: absolute;
+  right: -50px;
+  top: 20px;
+}
+.floatdiv__two {
+  position: absolute;
+  left: -90px;
+  top: 30%;
+}
+.floatdiv__three {
+  position: absolute;
+  right: -100px;
+  bottom: 20px;
+}
+.pin__right {
+  position: absolute;
+  right: -70px;
+  top: 250px;
+}
+.pin__left {
+  position: absolute;
+  left: -60px;
+  top: 15%;
+}
+.hero__main {
+  width: 420px;
+  margin: auto;
+}
+/* MAIN  IMAGES*/
+/* MAIN */
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1400px) {
+  nav {
+    width: 100%;
+  }
+  main > section {
+    width: 95%;
+  }
+  .hero__text h1 {
+    font-size: 62px;
+  }
+  .wiket__float {
+    left: -70px;
+  }
+  .wiket__text {
+    left: 160px;
+  }
 }
 
-.App-link {
-  color: #61dafb;
+@media screen and (max-width: 1024px) {
+  nav ul {
+    display: none;
+  }
+
+  nav ul li {
+    margin: 1.5rem 2rem;
+  }
+
+  nav > div {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  nav > div > button {
+    display: block;
+    background: #faa834;
+    border-radius: 8px;
+    color: #fff8ef;
+    padding: 8px 16px;
+    outline: none;
+    border: none;
+  }
+
+  .nav__hamburger {
+    margin-left: 3em;
+  }
+
+  /* MAIN SECTION */
+  main > section {
+    flex-direction: column-reverse;
+  }
+
+  /* HERO-TEXT */
+  .wiket__text,
+  .wiket__float,
+  .main__images {
+    display: none;
+  }
+  .wiket__text__mobile {
+    display: block;
+  }
+  /* HERO-TEXT */
+
+  /* MAIN IMAGES */
+  .hero__main > div {
+    order: 1;
+    margin-top: 10px;
+  }
+  /* MAIN IMAGES */
+
+  /* MOBILE IMAGES */
+  .mobile__images {
+    width: 80%;
+    max-width: 400px;
+    display: block;
+    margin: auto;
+  }
+
+  .mobile__images h4 {
+    margin: 4px 0 0;
+    font-family: "Faible Bold";
+  }
+  .mobile__images p {
+    font-family: "Faible Regular";
+    font-size: 13px;
+  }
+
+  .mobile__top > div {
+    margin-top: 5px;
+  }
+  .mobile__bottom {
+    position: relative;
+    margin-top: 20px;
+  }
+  .mobile__backimage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .mobile__float {
+    background: #fff8ef;
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    width: 150px;
+    padding: 6px;
+  }
+  .mobile__floatdiv__one {
+    position: absolute;
+    top: -80px;
+    left: 5px;
+  }
+  .mobile__floatdiv__two {
+    position: absolute;
+    top: 80px;
+    right: -5px;
+  }
+  .mobile__floatdiv__three {
+    position: absolute;
+    bottom: -15px;
+    left: 15px;
+  }
+  /* MOBILE IMAGES */
+
+  /* MAIN SECTION */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 768px) {
+  nav {
+    padding: 1rem 0.5rem;
   }
-  to {
-    transform: rotate(360deg);
+  nav > img {
+    width: 100px;
   }
+  .nav__hamburger {
+    margin-left: 1.5em;
+  }
+  .hero__text {
+    padding: 0;
+  }
+  .hero__heading {
+    width: 90%;
+  }
+  /* MOBILE IMAGES */
+  .mobile__images {
+    width: 85%;
+  }
+  .mobile__float {
+    width: 130px;
+  }
+  /* MOBILE IMAGES */
+}
+
+@media screen and (max-width: 576px) {
+  .hero__heading {
+    width: 95%;
+  }
+  .hero__text h1 {
+    font-size: 42px;
+  }
+  .hero__text p {
+    font-size: 16px;
+  }
+  /* MOBILE IMAGES */
+  /* MOBILE IMAGES */
 }
