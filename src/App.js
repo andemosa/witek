@@ -7,7 +7,7 @@ function App() {
   const [width, setWidth] = React.useState(window.innerWidth);
   const breakpoint = 1024;
 
-  React.useEffect(() => {
+  React.useLayoutEffect(() => {
     const handleWindowResize = () => setWidth(window.innerWidth)
     window.addEventListener("resize", handleWindowResize);
 
@@ -16,12 +16,6 @@ function App() {
   }, []);
 
   return width < breakpoint ? <Mobile /> : <Desktop />;
-
-  // return (
-  //   <div >
-  //     <Index />
-  //   </div>
-  // );
 }
 
 export default App;
